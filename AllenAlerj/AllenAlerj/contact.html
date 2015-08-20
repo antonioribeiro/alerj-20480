@@ -48,15 +48,15 @@
         </nav>
 
         <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">CEP</label>
-            <input type="text" class="form-control" id="cep" placeholder="cep" v-model="cep" v-on="keyup: checkZip" autofocus>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Logradouro</label>
-            <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" v-model="logradouro">
-          </div>
-          <div class="btn btn-default" v-on="click: addZip">Adicionar</div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">CEP</label>
+                <input type="text" class="form-control" id="cep" placeholder="cep" v-model="cep" v-on="keyup: checkZip" autofocus>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Logradouro</label>
+                <input type="text" class="form-control" id="logradouro" placeholder="Logradouro" v-model="logradouro">
+            </div>
+            <div class="btn btn-default" v-on="click: addZip">Adicionar</div>
         </form>
 
         <br />
@@ -64,10 +64,12 @@
 
         <div class="well well-lg" v-if="list.length">
             <table class="table">
-                <tr>
-                    <td>CEP</td>
-                    <td>Logradouro</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>CEP</th>
+                        <th>Logradouro</th>
+                    </tr>
+                </thead>
                 <tr v-repeat="list">
                     <td>{{ cep }}</td>
                     <td>{{ logradouro }}</td>
